@@ -91,10 +91,10 @@ many developers who now enjoy using Jquery.
 ===Cleaning up, bundling, and running
 
 1. Delete all javascript files in your main app minus <b>application.js</b> and <b>rails.js</b>.
-2. cd mainapp (your main application not the engine).
-3. Type <b>bundle install</b> and hit enter.
-4. After bundling is finished type <b>rails generate baby_dove</b> and hit enter.
-5. Delete the index.html file in your main apps public directory.
+2. Delete the index.html file in your main apps public directory.
+3. cd mainapp (your main application not the engine).
+4. Type <b>bundle install</b> and hit enter.
+5. After bundling is finished type <b>rails generate baby_dove</b> and hit enter.
 
 You should see something similar to 
       => create  db/migrate/20101231052109_create_baby_dove_model_data.rb
