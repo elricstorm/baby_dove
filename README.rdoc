@@ -1,5 +1,19 @@
 =Rails 3.1 Engine (baby_dove) Example
+---
+For a long time I've been wanting to incorporate a core application into another rails
+application.  I've been working on a very deeply coded forum software called +Ki-Rin+ and thought it would
+be wonderful if I could just move it entirely to an engine and let another application use
+it without restricting either application's core functionality.
 
+====Enter Rails 3 and Engines
+
+With Rails 3, and especially 3.1 (edge rails), you now have the ability to create a fully
+functioning engine and add it to your application.  However, with every new learning step, it's
+sometimes difficult to see the entire picture without having some code to use as a reference point.
+Therefore, I created a very simple example engine called +baby_dove+ which will allow you to explore
+engines within Rails, and give you an idea of where to proceed.
+
+Because I like living on the edge, I wanted to make an example that works with the latest rails version, 3.1.
 
 ====What will you be accomplishing with this example?
 
@@ -77,8 +91,8 @@ and jquery-rails is what we'll be using in our main app for javascript
 Now then, go into your "mainapp".
 
 2. cd mainapp
-3. Type *bundle install* and hit enter.
-4. After bundling is finished type *rails generate baby_dove* and hit enter.
+3. Type +bundle install+ and hit enter.
+4. After bundling is finished type +rails generate baby_dove+ and hit enter.
 
 You should see something similar to 
       => create  db/migrate/20101231052109_create_baby_dove_model_data.rb
@@ -99,13 +113,13 @@ just how easy it is to create an engine in rails 3.1.
 
 ===Sources used to help create this engine
 
-* http://piotrsarnacki.com/2010/09/14/mountable-engines/
 * http://edgeapi.rubyonrails.org/classes/Rails/Engine.html
+* http://piotrsarnacki.com/2010/09/14/mountable-engines/
 * http://www.builtfromsource.com/2010/12/13/mountable-engines-in-rails-3-1-beta-getting-started/
 * https://github.com/krschacht/rails_3_engine_demo
 
 ===Contact me if you have any questions
 
 I'm more than happy to answer questions as I find time to browse my email.  If you have a question
-about engines or just want to chat, contact me at *jdezenzio@gmail.com*.  I look forward to hearing
+about engines or just want to chat, contact me at +jdezenzio@gmail.com+.  I look forward to hearing
 from you!
