@@ -96,3 +96,16 @@ http://localhost:3000/birds (or replace what your localhost:port is)
 You should see the view being added from birds.  Play around with the birds controller and start
 inspecting every file in the engine and make sure to read the notes.  You'll begin to understand
 just how easy it is to create an engine in rails 3.1.
+
+===Sources used to help create this engine
+
+* http://piotrsarnacki.com/2010/09/14/mountable-engines/
+* http://edgeapi.rubyonrails.org/classes/Rails/Engine.html
+* http://www.builtfromsource.com/2010/12/13/mountable-engines-in-rails-3-1-beta-getting-started/
+* https://github.com/krschacht/rails_3_engine_demo
+
+===Contact me if you have any questions
+
+I'm more than happy to answer questions as I find time to browse my email.  If you have a question
+about engines or just want to chat, contact me at *jdezenzio@gmail.com*.  I look forward to hearing
+from you!
