@@ -5,9 +5,9 @@ Create a Main Application and add the baby_dove engine as a gem
 Find a directory on your system where the mainapp and baby_dove will exist.
 They will be located in the same root directory, per below:
 
-[some root folder]
-    mainapp
-    baby_dove
+#[--some root folder]
+#        --mainapp
+#        --baby_dove
 
 The mainapp will be its own rails edge application.  The baby_dove app will
 be a fully functioning rails engine.  Do not create either directory yet.
@@ -31,17 +31,18 @@ rails new mainapp -d mysql
       create  app/models
       create  app/views/layouts/application.html.erb
       etc....
-cd mainapp
-edit config/database.yml and update as necessary
-edit gemfile and do the following:
--- comment out gem 'rails', '3.0.3' => #gem 'rails', '3.0.3'
--- [add] gem 'rails', :git => 'git://github.com/rails/rails.git'
--- [add] gem 'arel', :git => 'git://github.com/rails/arel.git'
--- [add] gem 'rack', :git => "git://github.com/rack/rack.git"
--- [add] gem 'baby_dove', :path => "../baby_dove"
--- [add] gem 'coderay'
--- [add] gem 'jquery-rails'
-save gemfile
+
+#cd mainapp
+#edit config/database.yml and update as necessary
+#edit gemfile and do the following:
+#-- comment out gem 'rails', '3.0.3' => #gem 'rails', '3.0.3'
+#-- [add] gem 'rails', :git => 'git://github.com/rails/rails.git'
+#-- [add] gem 'arel', :git => 'git://github.com/rails/arel.git'
+#-- [add] gem 'rack', :git => "git://github.com/rack/rack.git"
+#-- [add] gem 'baby_dove', :path => "../baby_dove"
+#-- [add] gem 'coderay'
+#-- [add] gem 'jquery-rails'
+#save gemfile
 
 Your mainapp gemfile should look like this:
 
