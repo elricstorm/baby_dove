@@ -149,5 +149,5 @@ just how easy it is to create an engine in rails 3.1.
 ===Contact me if you have any questions
 
 I'm more than happy to answer questions as I find time to browse my email.  If you have a question
-about engines or just want to chat, <a href="mailto:jdezenzio@gmail.com">send me some email</a>.  I
+about engines or just want to chat, mailto:jdezenzio@gmail.com send me some email</a>.  I
 look forward to hearing from you!
