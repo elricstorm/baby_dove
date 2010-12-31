@@ -30,8 +30,9 @@ module BabyDove
 
     private
     # As you can see here, we are able to utilize before_filters and in addition,
-    # I'm also calling an abbrev_date format from initializers/date.rb to format
-    # the date with.
+    # I'm also checking the current time and later on, I'll add a helper file in
+    # the view to alter this time stamp with some special formatting that is located
+    # in the date.rb file within initializers.
     def check_timestamp
       @current_time = Time.now
     end
