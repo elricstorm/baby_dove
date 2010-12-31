@@ -91,21 +91,23 @@ many developers who now enjoy using Jquery.
 ===Cleaning up, bundling, and running
 
 1. Delete all javascript files in your main app minus <b>application.js</b> and <b>rails.js</b>.
-
-Now then, go into your "mainapp".
-
-2. cd mainapp
+2. cd mainapp (your main application not the engine).
 3. Type <b>bundle install</b> and hit enter.
 4. After bundling is finished type <b>rails generate baby_dove</b> and hit enter.
 
 You should see something similar to 
       => create  db/migrate/20101231052109_create_baby_dove_model_data.rb
 
+What just occurred is that the baby_dove engine created a migration file in your main
+application that will handle the installation of any tables or data we want to add.  You can
+find out more by looking into the engine source directories, especially under:
+      baby_dove/lib/generators
+
 You can go inspect the migration that was installed from the engine to your mainapp.
 
-5. Run rake db:create
-6. Run rake db:migrate
-7. Run rails server
+* --> Run rake db:create
+* --> Run rake db:migrate
+* --> Run rails server
 
 Open up your localhost page and go to the following url:
 
@@ -114,6 +116,28 @@ http://localhost:3000/birds (or replace what your localhost:port is)
 You should see the view being added from birds.  Play around with the birds controller and start
 inspecting every file in the engine and make sure to read the notes.  You'll begin to understand
 just how easy it is to create an engine in rails 3.1.
+
+===Digging into the Code
+
+* baby_dove/app/controllers/baby_dove - contains our engine controller files
+* baby_dove/app/helpers/baby_dove - contains our engine helper files
+* baby_dove/app/models - contains our engine models
+* baby_dove/app/views/baby_dove - contains our engine views.
+* baby_dove/app/views/layouts - contains the baby_dove layout (yes you can use your own engine layout).
+* baby_dove/config/initializers - you can include any initializers you want to work with your engine here.
+* baby_dove/config/routes.rb - contains all of the engine routes.
+* baby_dove/lib/baby_dove.rb - houses our starting engine and includes requires.
+* baby_dove/lib/bird_feeder.rb - a simple module that I created to show how you can extend modules/classes/methods.
+* baby_dove/lib/baby_dove - houses our engine.rb file
+* baby_dove/lib/extensions - has an action_controller handle for custom methods
+* baby_dove/lib/generators - handles migrations
+* baby_dove/lib/nbproject - I created a netbeans project so if you use netbeans you can open this as a project in the IDE.  Netbeans is not necessary to use this engine.
+* baby_dove/lib/public - With engines you now have the ability to serve static assets or incorporate them into your engine.
+
+====Things you may want to play with
+
+* Run rake routes from your main app so you can see how it's pulling in the engine routes as well as the application routes.
+* Open up all of the folders and files in the engine and read any notes I've added which will offer further explanations.
 
 ===Sources used to help create this engine
 
