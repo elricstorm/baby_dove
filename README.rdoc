@@ -7,8 +7,8 @@ They will be located in the same root directory, per below:
 
 === Directory Structure
 [some root folder]
-* +->mainapp+ - Your main application
-* +->baby_dove+ - The rails 3 custom engine
+* +mainapp+ - Your main application
+* +baby_dove+ - The rails 3 custom engine
 
 The mainapp will be its own rails edge application.  The baby_dove app will
 be a fully functioning rails engine.  Do not create either directory yet.
