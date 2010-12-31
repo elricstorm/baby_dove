@@ -1,0 +1,45 @@
+<h1>Listing birds</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Action</th>
+    <th>Action</th>
+    <th>Action</th>
+  </tr>
+
+  <% @birds.each do |bird| %>
+    <tr>
+      <td><%= bird.name %></td>
+      <td><%= link_to 'Show', bird %></td>
+      <td><%= link_to 'Edit', edit_bird_path(bird) %></td>
+      <td><%= link_to 'Destroy', bird, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br />
+<p><%= time_ab(@current_time) %></p>
+<p>What am I doing now?</p>
+<p><strong><%= feedseed %></strong></p>
+<p>The current date / time stamp is being called from a private method within the application_controller.rb file.
+  The method has been made available as a helper and the instance variable is now accessible.  Another helper
+method within application_helper.rb from the engine is formatting the time to an abbreviated date format.  This
+abbreviated date format is coming from date.rb located in the engine initializers directory.  So, with just one
+small date, a lot is already going on with the baby dove engine!</p>
+<p>The second message above is being called from a custom lib.  The library is being included in the
+  application controller within the engine.  The method "feedseed" has even been included as an available
+  helper to this view from application controller as well.  Go read the application_controller.rb notes
+  to see how it's all working.</p>
+<p>Also notice that none of the paths are being altered here.  They all look and function as if
+  they were a part of a normal app.</p>
+<p>Below this area we have a quick snip of ruby code that shows the use of adding coderay to the engine.  This shows you
+can add gems to the main application and still require them in the engine.  It's also using a helper from
+application_helper.rb within the engine to wrap the code in a custom div.</p>
+<%= raw coderay('
+  def rubycode
+    puts "hello"
+  end
+  ') %>
+
+<%= link_to 'New Bird', new_bird_path %>

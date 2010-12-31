@@ -1,0 +1,85 @@
+Create a Main Application and add the baby_dove engine as a gem
+
+Find a directory on your system where the mainapp and baby_dove will exist.
+They will be located in the same root directory, per below:
+
+-- some root folder
+---- mainapp
+---- baby_dove
+
+The mainapp will be its own rails edge application.  The baby_dove app will
+be a fully functioning rails engine.  Do not create either directory yet.
+Follow the instructions below:
+
+From your root folder as per above..
+
+git clone git@github.com/elricstorm/baby_dove.git
+
+rails new mainapp -d mysql
+      create
+      create  README
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+      create  app
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/mailers
+      create  app/models
+      create  app/views/layouts/application.html.erb
+      etc....
+cd mainapp
+edit config/database.yml and update as necessary
+edit gemfile and do the following:
+-- comment out gem 'rails', '3.0.3' => #gem 'rails', '3.0.3'
+-- [add] gem 'rails', :git => 'git://github.com/rails/rails.git'
+-- [add] gem 'arel', :git => 'git://github.com/rails/arel.git'
+-- [add] gem 'rack', :git => "git://github.com/rack/rack.git"
+-- [add] gem 'baby_dove', :path => "../baby_dove"
+-- [add] gem 'coderay'
+-- [add] gem 'jquery-rails'
+save gemfile
+
+Your mainapp gemfile should look like this:
+
+source 'http://rubygems.org'
+
+gem 'mysql'
+gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'arel', :git => 'git://github.com/rails/arel.git'
+gem 'rack', :git => "git://github.com/rack/rack.git"
+gem 'baby_dove', :path => "../baby_dove"
+gem 'coderay'
+gem 'jquery-rails'
+
+The first three gems we added allow you to use edge rails.  The
+baby_dove gem is being required from a path.  You can add it as a
+gem once you compile it, but by doing it this way, you can update
+the gem engine without having to rebuild it all of the time.  It's
+like being on "edge engines"..
+
+The coderay is being added because it's a part of our engine example,
+and jquery-rails is what we'll be using in our main app.
+
+Delete all javascript files in your main app minus application.js and rails.js.
+
+Now then, go into your "mainapp".
+
+cd mainapp
+Type [bundle install] without the brackets and hit enter.
+After bundling is finished type [rails generate baby_dove] without the brackets and hit enter.
+You should see something similar to => create  db/migrate/20101231052109_create_baby_dove_model_data.rb
+You can go inspect the migration that was installed from the engine to your mainapp.
+
+Run rake db:create
+Run rake db:migrate
+Run rails server
+
+Open up your localhost page and go to the following url:
+
+http://localhost:3000/birds (or replace what your localhost:port is)
+
+You should see the view being added from birds.  Play around with the birds controller and start
+inspecting every file in the engine and make sure to read the notes.  You'll begin to understand
+just how easy it is to create an engine in rails 3.1.

@@ -1,0 +1,13 @@
+<head>
+  <meta charset="UTF-8">
+  <title><%= yield(:title) || '' %></title>
+  <%= javascript_include_tag 'jquery-1.4.4.min.js', 'baby_dove.js' %>
+  <%= csrf_meta_tag %>
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <%= css_screen('blueprint/screen', 'coderay', 'baby_dove') %>
+  <%= css_print('blueprint/print') %>
+  <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
+  <%= yield(:head) %>
+</head>

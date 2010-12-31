@@ -1,0 +1,25 @@
+<%= form_for(@bird) do |f| %>
+  <!--
+
+  Here I'm showing a very simple example of how to render a partial
+  from another directory within the views/engine_name directory
+  called shared.  Because rails will look in app/views we need to
+  prepend the name of the engine so it looks in the appropriate spot.
+
+  Take a look at shared/_error_messages.html.erb to see what it's doing.
+  The shared error messages partial allows you to remain a little more
+  dry in your forms and it's a little cleaner as well.
+
+  -->
+  <%= render "baby_dove/shared/error_messages", :target => @bird %>
+
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
