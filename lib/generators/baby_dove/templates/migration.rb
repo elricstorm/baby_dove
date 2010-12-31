@@ -11,6 +11,7 @@ class CreateBabyDoveModelData < ActiveRecord::Migration
     end
 
     # You can more tables here
+    # In my forum engine I have added 30 different tables in just one file!
     
   end # End of self.up
 

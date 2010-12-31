@@ -16,6 +16,10 @@ class BabyDoveGenerator < Rails::Generators::Base
     end
   end
 
+  # This method is pulling all of the migration data from the migration.rb template.
+  # After it pulls the migration date, it generates a migration in the main application
+  # called create_baby_dove_model_data...
+  # You can change the name of this if and when you make your own engine.
   def create_migration_file
     migration_template 'migration.rb', 'db/migrate/create_baby_dove_model_data.rb'
   end
