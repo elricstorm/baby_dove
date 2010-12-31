@@ -142,6 +142,18 @@ just how easy it is to create an engine in rails 3.1.
 * Run rake routes from your main app so you can see how it's pulling in the engine routes as well as the application routes.
 * Open up all of the folders and files in the engine and read any notes I've added which will offer further explanations.
 
+====Important Notables
+
+There are two very important decisions that you will ultimately decide on when constructing your engine and that is whether or not
+you will be namespacing it.  If you completely namespace it, including the models, the model table names will be prefixed with
+engine_tablename.  For instance, if baby_dove were completely namespaced on the models, the table for birds would be named
+baby_dove_birds instead of birds.  Namespacing is fantastic on the surface, depending on how you utilize it, because you keep the
+engine completely separated from conflicts with the main application.  However, there are some annoyances that bother me and I really
+think if you can be certain that your engine isn't going to create conflicts, then decide whether you really want to namespace it entirely,
+or whether you want to namespace certain aspects of it.
+
+You can find more about namespacing mountable apps here:  http://piotrsarnacki.com/2010/12/21/mountable-apps-tutorial/
+
 ===Sources used to help create this engine
 
 * http://edgeapi.rubyonrails.org/classes/Rails/Engine.html

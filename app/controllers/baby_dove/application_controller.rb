@@ -1,6 +1,7 @@
 module BabyDove
   # Using this setup, we must define our controller by wrapping it with our engine module
-  # Make sure you do this will all controllers using this engine template.
+  # Make sure you do this with all controllers using this engine template.  In essence,
+  # we're namespacing our controllers in this engine.
   class ApplicationController < ActionController::Base
 
     # You can read more about unloadable here: http://strd6.com/2009/04/cant-dup-nilclass-maybe-try-unloadable/
