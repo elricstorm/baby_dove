@@ -5,9 +5,9 @@ Create a Main Application and add the baby_dove engine as a gem
 Find a directory on your system where the mainapp and baby_dove will exist.
 They will be located in the same root directory, per below:
 
-*--some root folder
-*----mainapp
-*----baby_dove
+[some root folder]
+    mainapp
+    baby_dove
 
 The mainapp will be its own rails edge application.  The baby_dove app will
 be a fully functioning rails engine.  Do not create either directory yet.
