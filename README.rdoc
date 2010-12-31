@@ -1,9 +1,13 @@
 =Rails 3.1 Engine (baby_dove) Example
 
-Create a Main Application and add the baby_dove engine as a gem
+====What will you be accomplishing with this example?
 
-Find a directory on your system where the mainapp and baby_dove will exist.
-They will be located in the same root directory, per below:
+You will be creating a Main Application and adding the baby_dove engine as a gem to your application.  By
+adding the engine, you will be in effect sharing routes, controllers, models, views, libs, and rails
+dependencies globally.
+
+Find a directory on your system where the mainapp and baby_dove will exist.  They will be located in the same root
+directory, per below:
 
 === Directory Structure
 [some root folder]
@@ -33,29 +37,27 @@ rails new mainapp -d mysql
       create  app/views/layouts/application.html.erb
       etc....
 
-cd mainapp
-edit config/database.yml and update as necessary
-edit gemfile and do the following:
-* #comment out gem 'rails', '3.0.3' => #gem 'rails', '3.0.3'
-* [add] +gem+ 'rails', :git => 'git://github.com/rails/rails.git'
-* [add] +gem+ 'arel', :git => 'git://github.com/rails/arel.git'
-* [add] +gem+ 'rack', :git => "git://github.com/rack/rack.git"
-* [add] +gem+ 'baby_dove', :path => "../baby_dove"
-* [add] +gem+ 'coderay'
-* [add] +gem+ 'jquery-rails'
-save +gemfile+
+* cd mainapp
+* edit config/database.yml and update as necessary
+* edit gemfile and do the following:
+*   #comment out gem 'rails', '3.0.3' => #gem 'rails', '3.0.3'
+*   [add] +gem+ 'rails', :git => 'git://github.com/rails/rails.git'
+*   [add] +gem+ 'arel', :git => 'git://github.com/rails/arel.git'
+*   [add] +gem+ 'rack', :git => "git://github.com/rack/rack.git"
+*   [add] +gem+ 'baby_dove', :path => "../baby_dove"
+*   [add] +gem+ 'coderay'
+*   [add] +gem+ 'jquery-rails'
+* save your +gemfile+
 
 Your mainapp gemfile should look like this:
-
-source 'http://rubygems.org'
-
-gem 'mysql'
-gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'arel', :git => 'git://github.com/rails/arel.git'
-gem 'rack', :git => "git://github.com/rack/rack.git"
-gem 'baby_dove', :path => "../baby_dove"
-gem 'coderay'
-gem 'jquery-rails'
+      source 'http://rubygems.org'
+      gem 'mysql'
+      gem 'rails', :git => 'git://github.com/rails/rails.git'
+      gem 'arel', :git => 'git://github.com/rails/arel.git'
+      gem 'rack', :git => "git://github.com/rack/rack.git"
+      gem 'baby_dove', :path => "../baby_dove"
+      gem 'coderay'
+      gem 'jquery-rails'
 
 The first three gems we added allow you to use edge rails.  The
 baby_dove gem is being required from a path.  You can add it as a
