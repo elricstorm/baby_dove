@@ -94,6 +94,7 @@ many developers who now enjoy using Jquery.
 2. cd mainapp (your main application not the engine).
 3. Type <b>bundle install</b> and hit enter.
 4. After bundling is finished type <b>rails generate baby_dove</b> and hit enter.
+5. Delete the index.html file in your main apps public directory.
 
 You should see something similar to 
       => create  db/migrate/20101231052109_create_baby_dove_model_data.rb
@@ -112,6 +113,8 @@ You can go inspect the migration that was installed from the engine to your main
 Open up your localhost page and go to the following url:
 
 http://localhost:3000/birds (or replace what your localhost:port is)
+
+By default, I've set the routes.rb file in the engine to use the birds view as the default root.
 
 You should see the view being added from birds.  Play around with the birds controller and start
 inspecting every file in the engine and make sure to read the notes.  You'll begin to understand
@@ -149,5 +152,5 @@ just how easy it is to create an engine in rails 3.1.
 ===Contact me if you have any questions
 
 I'm more than happy to answer questions as I find time to browse my email.  If you have a question
-about engines or just want to chat, mailto:jdezenzio@gmail.com send me some email</a>.  I
+about engines or just want to chat, write to mailto:jdezenzio@gmail.com and send me some email.  I
 look forward to hearing from you!
