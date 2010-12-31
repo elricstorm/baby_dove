@@ -20,9 +20,9 @@ Follow the instructions below:
 
 From your root folder as per above..
 
-git clone git@github.com/elricstorm/baby_dove.git
+1. git clone git@github.com/elricstorm/baby_dove.git
 
-rails new mainapp -d mysql
+2. rails new mainapp -d mysql
       create
       create  README
       create  Rakefile
@@ -37,9 +37,9 @@ rails new mainapp -d mysql
       create  app/views/layouts/application.html.erb
       etc....
 
-* cd mainapp
-* edit config/database.yml and update as necessary
-* edit gemfile and do the following:
+3. cd mainapp
+4. edit config/database.yml and update as necessary
+5. edit gemfile and do the following:
 *   #comment out gem 'rails', '3.0.3' => #gem 'rails', '3.0.3'
 *   [add] +gem+ 'rails', :git => 'git://github.com/rails/rails.git'
 *   [add] +gem+ 'arel', :git => 'git://github.com/rails/arel.git'
@@ -47,7 +47,7 @@ rails new mainapp -d mysql
 *   [add] +gem+ 'baby_dove', :path => "../baby_dove"
 *   [add] +gem+ 'coderay'
 *   [add] +gem+ 'jquery-rails'
-* save your +gemfile+
+6. save your +gemfile+
 
 Your mainapp gemfile should look like this:
       source 'http://rubygems.org'
